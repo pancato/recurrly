@@ -1,19 +1,15 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { styled } from "nativewind";
+import { Text } from "react-native";
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
+const SafeAreaView = styled(RNSafeAreaView);
 
 export default function Index() {
   return (
-    <View className="flex-1 items-center justify-center">
+    <SafeAreaView className="flex-1 bg-background p-5">
       <Text className="text-red-500">
         Edit app/index.tsx to edit this screen.
       </Text>
-
-      <Link
-        className="mt-4 rounded bg-primary text-white p-4"
-        href={"/onboarding"}
-      >
-        Go to Onboarding
-      </Link>
 
       <Link
         className="mt-4 rounded bg-primary text-white p-4"
@@ -35,6 +31,6 @@ export default function Index() {
       >
         Go to Insights
       </Link>
-    </View>
+    </SafeAreaView>
   );
 }
