@@ -21,6 +21,7 @@ declare global {
     paymentMethod?: string;
     status?: string;
     startDate?: string;
+    frequency?: string;
     price: number;
     currency?: string;
     billing: string;
